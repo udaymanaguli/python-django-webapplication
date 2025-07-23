@@ -116,8 +116,8 @@ def send(request):
     otp1 = int(random.randint(1000, 9999))
     global otn
     otn = otp1
-    account_sid = 'ACd2537d50f47126bfcac64fb195e85479'
-    auth_token = 'a9344eb1610f5b0ff26065079d4ca44a'
+    account_sid = 'xxxxx'
+    auth_token = 'xxxxxx'
     client = Client(account_sid, auth_token)
     message = client.messages.create(
 
