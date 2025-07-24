@@ -1,0 +1,44 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(VoteBackground.png);
+background-size: cover;
+background-position: center;
+    color: #black;
+}
+h3{
+  border-style: solid;
+  border-color: black;
+  border-radius: 3px;
+  background-color: white;
+}
+
+button
+{
+    padding: 15px 55px;
+    background-color: #4070f4;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s;
+}
+button:active
+{
+    transform: scale(.9);
+}

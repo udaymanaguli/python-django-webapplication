@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'stylelogin1.css' %}">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Login</h1>
+      <form method="post" action="">
+        {% csrf_token %}
+        <div class="txt_field">
+          <input type="text" name="identi" required>
+          <span></span>
+          <label>ID</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" name="pass1" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" name="numb" required>
+          <span></span>
+          <label>+91 Phone number</label>
+        </div>
+         <div class="input-box button">
+        <input type="Submit" value="Login">
+      </div>
+      </form>
+    </div>
+
+  </body>
+</html>
