@@ -9,7 +9,7 @@ The eVoting platform enables:
 - **OTP verification** during login to ensure secure authentication.
 - **One-time vote casting**, with validation to prevent re-voting.
 - **Admin interface** to manage voter eligibility and monitor results.
-- **Secure backend database**, hosted using Microsoft Azure Cloud for scalability and data integrity.
+
 
 This system is particularly useful for individuals unable to visit physical polling booths due to distance, disability, or international residence.
 
