@@ -18,7 +18,7 @@ This system is particularly useful for individuals unable to visit physical poll
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Python, Django
 - **Database:** MySQL
-- **Authentication:** OTP (via Twilio or equivalent)
+- **Authentication:** OTP (via Twilio)
 
 
 ## 🧩 Key Features
