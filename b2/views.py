@@ -11,7 +11,11 @@ import b2.models
 from .models import Vote, Choice, Option
 from twilio.rest import Client
 import random
-
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+from .serializers import VoteRegisterSerializer, UserSerializer
+from django.contrib.auth.models import User
 
 def home(request):
     return render(request, "index.html")
@@ -21,6 +25,35 @@ val = None
 pho = None
 otn = None
 
+@api_view(['POST'])
+def api_register(request):
+    # Create Django user
+    user_data = {
+        'username': request.data.get('username'),
+        'first_name': request.data.get('first_name'),
+        'last_name': request.data.get('last_name'),
+        'password': request.data.get('password')
+    }
+    user_serializer = UserSerializer(data=user_data)
+    if user_serializer.is_valid():
+        user_serializer.save()
+    else:
+        return Response(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    # Create Vote entry
+    vote_data = {
+        'identity': request.data.get('identity'),
+        'name': request.data.get('name'),
+        'phone': request.data.get('phone'),
+        'location': request.data.get('location'),
+        'dob': request.data.get('dob')
+    }
+    vote_serializer = VoteRegisterSerializer(data=vote_data)
+    if vote_serializer.is_valid():
+        vote_serializer.save()
+        return Response({"success": True, "message": "User registered successfully"}, status=status.HTTP_201_CREATED)
+    else:
+        return Response(vote_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 def register(request):
     if request.method == 'POST':
@@ -126,3 +159,9 @@ def send(request):
         to=f'{pho}'
     )
     return render(request, "otn.html")
+
+
+
+
+
+
