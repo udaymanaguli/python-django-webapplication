@@ -8,5 +8,6 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('login/verify/otn/vot/', views.voting, name='voting'),
     path('login/verify/', views.send, name='send'),
-    path('login/verify/otn/', views.otp, name='otn')
+    path('login/verify/otn/', views.otp, name='otn'),
+    path('api/register/', views.api_register, name='api_register'),
 ]
