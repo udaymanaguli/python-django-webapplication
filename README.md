@@ -1,8 +1,8 @@
-# Web Based eVoting System 🗳️
+# Web Based eVoting System 
 
 This project is a **Web-based eVoting System** built using Django and MySQL. It allows eligible users to register, verify via OTP, and securely cast their votes online. The system is designed to streamline the voting process and provide an efficient, remote-access solution to traditional physical voting methods.
 
-## 🔍 Project Summary
+##  Project Summary
 
 The eVoting platform enables:
 - **User registration** with basic verification using unique Voting ID and phone number.
@@ -13,7 +13,7 @@ The eVoting platform enables:
 
 This system is particularly useful for individuals unable to visit physical polling booths due to distance, disability, or international residence.
 
-## 💻 Tech Stack
+##  Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Python, Django
@@ -21,12 +21,12 @@ This system is particularly useful for individuals unable to visit physical poll
 - **Authentication:** OTP (via Twilio)
 
 
-## 🧩 Key Features
+##  Key Features
 
-- ✅ Voter Registration with ID verification
-- 🔐 Secure Login with OTP
-- 🗳️ Simple and user-friendly voting interface
-- 👤 Admin dashboard using Django Admin
+-  Voter Registration with ID verification
+-  Secure Login with OTP
+-  Simple and user-friendly voting interface
+-  Admin dashboard using Django Admin
 
 
 ## Modules Overview
