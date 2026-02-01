@@ -5,7 +5,8 @@ from .models import Vote
 class VoteRegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vote
-        fields = ['identity', 'dob', 'phone']  # Adjust fields to match your Vote model
+        # Use all the fields that exist in your Vote model
+        fields = ['identity', 'name', 'phone', 'location', 'dob']
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -21,4 +22,3 @@ class UserSerializer(serializers.ModelSerializer):
             password=validated_data['password']
         )
         return user
-
